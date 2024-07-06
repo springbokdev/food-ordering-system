@@ -8,4 +8,15 @@
     </parent>
     <artifactId>order-messaging</artifactId>
     <name>order-messaging</name>
+
+    <properties>
+
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>space.springbok.ordering.system</groupId>
+            <artifactId>order-application-service</artifactId>
+        </dependency>
+    </dependencies>
 </project>

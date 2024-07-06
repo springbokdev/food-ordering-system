@@ -8,4 +8,15 @@
     </parent>
     <artifactId>order-dataaccess</artifactId>
     <name>order-dataaccess</name>
+
+    <properties>
+
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>space.springbok.ordering.system</groupId>
+            <artifactId>order-application-service</artifactId>
+        </dependency>
+    </dependencies>
 </project>

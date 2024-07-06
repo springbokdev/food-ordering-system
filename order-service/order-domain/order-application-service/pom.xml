@@ -9,5 +9,14 @@
     <artifactId>order-application-service</artifactId>
     <name>order-application-service</name>
 
+    <properties>
 
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>space.springbok.ordering.system</groupId>
+            <artifactId>order-domain-core</artifactId>
+        </dependency>
+    </dependencies>
 </project>

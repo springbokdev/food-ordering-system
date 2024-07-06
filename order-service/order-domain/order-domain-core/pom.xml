@@ -8,4 +8,8 @@
     </parent>
     <artifactId>order-domain-core</artifactId>
     <name>order-domain-core</name>
+
+    <properties>
+
+    </properties>
 </project>

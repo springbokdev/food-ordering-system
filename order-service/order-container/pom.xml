@@ -8,4 +8,31 @@
     </parent>
     <artifactId>order-container</artifactId>
     <name>order-container</name>
+
+    <properties>
+
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>space.springbok.ordering.system</groupId>
+            <artifactId>order-domain-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>space.springbok.ordering.system</groupId>
+            <artifactId>order-application-service</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>space.springbok.ordering.system</groupId>
+            <artifactId>order-application</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>space.springbok.ordering.system</groupId>
+            <artifactId>order-dataaccess</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>space.springbok.ordering.system</groupId>
+            <artifactId>order-messaging</artifactId>
+        </dependency>
+    </dependencies>
 </project>
