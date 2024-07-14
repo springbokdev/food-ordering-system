@@ -2,6 +2,7 @@ package space.springbok.ordering.system.order.service.domain;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 import space.springbok.ordering.system.order.service.domain.dto.create.CreateOrderCommand;
@@ -34,6 +35,8 @@ public class OrderCreateCommandHandler {
 
     private final OrderDataMapper  orderDataMapper;
 
+    private final ApplicationDomainEventPublisher applicationDomainEventPublisher;
+
     @Transactional
     public CreateOrderResponse createOrder(CreateOrderCommand createOrderCommand) {
         checkCustomer(createOrderCommand.getCustomerId());
@@ -42,6 +45,7 @@ public class OrderCreateCommandHandler {
         OrderCreatedEvent orderCreatedEvent = orderDomainService.validateAndInitiateOrder(order, restaurant);
         Order orderResult = saveOrder(order);
         log.info("Order is created with id: {}", orderResult.getId().getValue());
+        applicationDomainEventPublisher.publish(orderCreatedEvent);
         return orderDataMapper.orderToCreateOrderResponse(orderResult);
     }
 
