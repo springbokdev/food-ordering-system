@@ -1,5 +1,9 @@
 # Food Ordering System
 
+Thia project demonstrates the implementation of a food ordering system using microservuces with 
+Clean and Hexagonal architectures, DDD, SAGA, Outbox, CQRS, Kafka, Kubernetes & Google Kubernetes
+Engine (GKE).
+
 The system is composed of the following microservices:
 
 - Order Service
