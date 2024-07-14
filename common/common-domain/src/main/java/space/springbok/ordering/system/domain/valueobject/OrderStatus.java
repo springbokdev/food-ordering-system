@@ -2,5 +2,5 @@ package space.springbok.ordering.system.domain.valueobject;
 
 public enum OrderStatus {
 
-    PENDING, PAID, APPROVED, CANCELLING, CANCELED
+    PENDING, PAID, APPROVED, CANCELLING, CANCELLED
 }
