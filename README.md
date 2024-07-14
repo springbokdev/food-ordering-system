@@ -1,5 +1,11 @@
-# food-ordering-system
-Food Ordering System project
+# Food Ordering System
+
+The system is composed of the following microservices:
+
+- Order Service
+- Customer Service Payment Service
+- Payment Service
+- Restaurant Service
 
 ## Setting up the environment
 
@@ -10,9 +16,14 @@ Food Ordering System project
 - Postman
 - kcat (formerly known as kafkacat)
 - PostgreSQL
-- 
 
-## Visualizing module dependencies with Graphviz
+## Module dependencies of the Order Service
+
+Image below shows the module dependencies of the Order Service.
+
+![Module depencies.](./images/dependency-graph.png)
+
+### Visualizing module dependencies with Graphviz
 
 ```
 mvn com.github.ferstl:depgraph-maven-plugin:aggregate -DcreateImage=true -DreduceEdges=false -Dscope=compile "-Dincludes=space.springbok.ordering.system*:*"
