@@ -44,7 +44,7 @@ public class OrderDataMapper {
                 .orderTrackingId(order.getTrackingId().getValue())
                 .orderStatus(order.getOrderStatus())
 
-                .build()
+                .build();
     }
 
     private List<OrderItem> orderItemsToOrderItemEntities(
