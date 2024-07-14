@@ -8,6 +8,7 @@ import space.springbok.ordering.system.domain.valueobject.RestaurantId;
 import space.springbok.ordering.system.order.service.domain.dto.create.CreateOrderCommand;
 import space.springbok.ordering.system.order.service.domain.dto.create.CreateOrderResponse;
 import space.springbok.ordering.system.order.service.domain.dto.create.OrderAddress;
+import space.springbok.ordering.system.order.service.domain.dto.track.TrackOrderResponse;
 import space.springbok.ordering.system.order.service.domain.entity.Order;
 import space.springbok.ordering.system.order.service.domain.entity.OrderItem;
 import space.springbok.ordering.system.order.service.domain.entity.Product;
@@ -43,7 +44,14 @@ public class OrderDataMapper {
         return CreateOrderResponse.builder()
                 .orderTrackingId(order.getTrackingId().getValue())
                 .orderStatus(order.getOrderStatus())
+                .build();
+    }
 
+    public TrackOrderResponse orderToTrackOrderResponse(Order order) {
+        return TrackOrderResponse.builder()
+                .orderTrackingId(order.getTrackingId().getValue())
+                .orderStatus(order.getOrderStatus())
+                .failureMessages(order.getFailureMessages())
                 .build();
     }
 
