@@ -15,7 +15,7 @@ The system is composed of the following microservices:
 
 Image below shows the module dependencies of the Order Service.
 
-![Module depencies.](./images/dependency-graph.png)
+![Module depencies.](documentation/order-service/images/dependency-graph.png)
 
 ### Visualizing module dependencies with Graphviz
 
