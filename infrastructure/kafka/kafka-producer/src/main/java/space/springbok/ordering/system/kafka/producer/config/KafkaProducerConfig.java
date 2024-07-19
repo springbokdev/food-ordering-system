@@ -1,4 +1,4 @@
-package space.springbok.ordering.system.kafka.producer;
+package space.springbok.ordering.system.kafka.producer.config;
 
 import lombok.RequiredArgsConstructor;
 import org.apache.avro.specific.SpecificRecordBase;
